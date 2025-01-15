@@ -326,5 +326,14 @@
     </footer>
 
 </body>
-
+<script>
+    document.querySelector('.back-button').addEventListener('click', function(event) {
+        event.preventDefault();
+        if (document.referrer) {
+            window.history.back();  // Volta para a página anterior
+        } else {
+            window.location.href = "https://fl-tabacaria.vercel.app/FL.html";  // URL de fallback
+        }
+    });
+</script>
 </html>
